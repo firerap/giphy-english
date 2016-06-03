@@ -1,0 +1,15 @@
+<div class="predict">
+  <header>
+    <h2 class="predict__title">Can you guess the word?</h2>
+    <div class="predict__word">
+      Word is <input ng-enter="vm.wordSubmit($event)" type="text" name="name" value="">
+    </div>
+  </header>
+  <md-grid-list  md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="4"
+        md-row-height-gt-md="1:1" md-row-height="2:2"
+        md-gutter="12px" md-gutter-gt-sm="8px" >
+    <md-grid-tile ng-repeat="gif in vm.gifs">
+      <img ng-src="{{gif}}" alt="" />
+    </md-grid-tile>
+  </md-grid-list>
+</div>
